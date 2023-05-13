@@ -5,5 +5,6 @@ CREATE TABLE
         created_at timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
         updated_at timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
         deleted_at timestamp,
-        CONSTRAINT pk_categories PRIMARY KEY (id)
+        CONSTRAINT pk_categories PRIMARY KEY (id),
+        CONSTRAINT unq_categories UNIQUE (name)
     );

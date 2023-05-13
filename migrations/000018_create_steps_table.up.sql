@@ -4,5 +4,6 @@ CREATE TABLE
         updated_at timestamp DEFAULT CURRENT_DATE NOT NULL,
         deleted_at timestamp,
         name varchar(100) NOT NULL,
-        CONSTRAINT pk_steps PRIMARY KEY (id)
+        CONSTRAINT pk_steps PRIMARY KEY (id),
+        CONSTRAINT unq_steps UNIQUE (name)
     );

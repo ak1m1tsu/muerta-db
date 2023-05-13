@@ -9,8 +9,10 @@ CREATE TABLE
         updated_at timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
         deleted_at timestamp,
         CONSTRAINT pk_storages PRIMARY KEY (id),
-        CONSTRAINT unq_storages_id_type UNIQUE (id_type)
+        CONSTRAINT unq_storages UNIQUE (name)
     );
+
+CREATE INDEX idx_storages ON storages ( id_type );
 
 ALTER TABLE storages
 ADD

@@ -6,8 +6,10 @@ CREATE TABLE
         updated_at timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
         deleted_at timestamp,
         CONSTRAINT pk_settings PRIMARY KEY (id),
-        CONSTRAINT unq_settings_id_category UNIQUE (id_category)
+        CONSTRAINT unq_settings UNIQUE (name)
     );
+
+CREATE INDEX unq_settings_id_category ON settings (id_category);
 
 ALTER TABLE settings
 ADD

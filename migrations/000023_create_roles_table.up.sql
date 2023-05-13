@@ -4,5 +4,6 @@ CREATE TABLE
         name varchar(100) NOT NULL,
         created_at timestamptz DEFAULT CURRENT_TIMESTAMP NOT NULL,
         deleted_at timestamptz,
-        CONSTRAINT pk_roles PRIMARY KEY (id)
+        CONSTRAINT pk_roles PRIMARY KEY (id),
+        CONSTRAINT unq_roles UNIQUE (name)
     );
